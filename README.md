@@ -1,4 +1,4 @@
-# ASSIGNMENT Reachify #
+# ASSIGNMENT EZ-Labs(Backend) #
 <div align="center"> <br /> <h1>Secure File Management System</h1> <div> <img src="https://img.shields.io/badge/-Flask-black?style=for-the-badge&logoColor=white&logo=flask&color=000000" alt="Flask" /> <img src="https://img.shields.io/badge/-Bootstrap-black?style=for-the-badge&logoColor=white&logo=bootstrap&color=7952B3" alt="Bootstrap" /> <img src="https://img.shields.io/badge/-WTForms-black?style=for-the-badge&logoColor=white&logo=python&color=3776AB" alt="WTForms" /> <img src="https://img.shields.io/badge/-Jinja2-black?style=for-the-badge&logoColor=white&logo=jinja&color=B41717" alt="Jinja2" /> </div> <h3 align="center">Secure Document Management for Operations and Client Users</h3> </div>
   
 # 📋 Introduction #
@@ -7,63 +7,46 @@ The File Management System is a secure web application designed for operations t
 # ⚙️ Tech Stack #
 
 Frontend: Bootstrap 5, Font Awesome
-
 Backend: Flask, Flask-WTF, WTForms
-
 Security: ItsDangerous (token generation), Session-based authentication
-
 Templating: Jinja2 with custom filters
-
 File Handling: Secure filename validation, type restrictions
-
 
 
 # 🌟 Features #
 
 Role-Based Access Control:
-Operations users: Upload office documents (pptx/docx/xlsx)
-
-Client users: List and download available files
-
+    Operations users: Upload office documents (pptx/docx/xlsx)
+    Client users: List and download available files
+    
 Secure Authentication:
-
-Encrypted email verification links
-
-Session management with secret key
+    Encrypted email verification links
+    Session management with secret key
 
 File Management:
-
-Strict file type validation
-
-Human-readable file size display
-
-Visual file type indicators
+    Strict file type validation
+    Human-readable file size display
+    Visual file type indicators
+    
 Responsive Design:
-
-Mobile-friendly interface
-
-Intuitive navigation
+    Mobile-friendly interface
+    Intuitive navigation
 
 Error Handling:
-
-Custom 404 and 500 error pages
-
-Form validation with user feedback
+    Custom 404 and 500 error pages
+    Form validation with user feedback
 
 
 # 🤸 Quick Start #
 
 Prerequisites
+
 Ensure you have installed:
 
-Python 3.8+
+    Python 3.8+
+    pip package manager
+  
 
-pip package manager
-
-Node.js, 
-Python 3.10+,
-Docker,
-MongoDB
 
 ```bash
 # Clone the repository
