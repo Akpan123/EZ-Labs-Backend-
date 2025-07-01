@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block title %}Upload Files{% endblock %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow-lg">
+            <div class="card-header bg-primary text-white">
+                <h3 class="mb-0"><i class="fas fa-upload me-2"></i>Upload Files</h3>
+            </div>
+            <div class="card-body">
+                <div class="alert alert-info">
+                    <i class="fas fa-info-circle me-2"></i>
+                    Only PowerPoint (.pptx), Word (.docx), and Excel (.xlsx) files are allowed
+                </div>
+                
+                <form method="POST" enctype="multipart/form-data">
+                    {{ form.hidden_tag() }}
+                    
+                    <div class="mb-4">
+                        <label class="form-label">Select file to upload</label>
+                        <div class="file-drop-area p-4 border rounded bg-light text-center">
+                            <i class="fas fa-cloud-upload-alt fa-3x text-muted mb-3"></i>
+                            <p class="mb-2">Drag & drop files here or click to browse</p>
+                            {{ form.file(class="form-control") }}
+                        </div>
+                    </div>
+                    
+                    <div class="d-grid">
+                        {{ form.submit(class="btn btn-primary btn-lg") }}
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div class="mt-4">
+            <h4 class="mb-3">Recent Uploads</h4>
+            <div class="list-group">
+                {% for filename in os.listdir(UPLOAD_FOLDER) %}
+                    {% if allowed_file(filename) %}
+                    {% set file_path = os.path.join(UPLOAD_FOLDER, filename) %}
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            {% if filename.endswith('.pptx') %}
+                                <i class="fas fa-file-powerpoint text-danger me-2"></i>
+                            {% elif filename.endswith('.docx') %}
+                                <i class="fas fa-file-word text-primary me-2"></i>
+                            {% elif filename.endswith('.xlsx') %}
+                                <i class="fas fa-file-excel text-success me-2"></i>
+                            {% else %}
+                                <i class="fas fa-file me-2"></i>
+                            {% endif %}
+                            {{ filename }}
+                        </div>
+                        <small class="text-muted">{{ get_file_size(file_path) }}</small>
+                    </div>
+                    {% endif %}
+                {% else %}
+                    <div class="list-group-item text-center text-muted py-4">
+                        <i class="fas fa-inbox fa-2x mb-2"></i>
+                        <p class="mb-0">No files uploaded yet</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
