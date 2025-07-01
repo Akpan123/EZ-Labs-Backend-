@@ -144,7 +144,7 @@ waitress-serve --port=5000 main:app
 
 | Operations Portal | Client Portal |
 |-------------------|---------------|
-| <img src="https://raw.githubusercontent.com/Akpan123/EZ-Labs-Backend-/main/static/files/ops_screenshot.png" width="400"> | <img src="https://raw.githubusercontent.com/Akpan123/EZ-Labs-Backend-/main/static/files/client_screenshot.png" width="400"> |
+| <img src="https://raw.githubusercontent.com/Akpan123/EZ-Labs-Backend-/refs/heads/main/static/files/Ops_Screenshot.png" width="400"> | <img src="https://raw.githubusercontent.com/Akpan123/EZ-Labs-Backend-/refs/heads/main/static/files/client_Screenshot.png" width="400"> |
 
 ## 📄 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
